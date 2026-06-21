@@ -1,31 +1,39 @@
-# Woolf University. Design Patterns Course. Homework – Template Method Pattern
+# Woolf University. Design Patterns Course. Homework – Template Method and Iterator Patterns
 
-Practice the Template Method pattern in TypeScript.
+Practice behavioral design patterns in TypeScript.
 
 ## Topic
 
-Build a user data export system using:
+Build a user data export and iteration system using:
 
 * Template Method
+* Iterator
 * Abstract classes
 * Hook methods
 * API data loading
-* Multiple output formats
 
 ## Main Logic
 
 The app should demonstrate:
 
-* Loading users from an API
-* Selecting and sorting required user fields
+* Loading and transforming user data from an API
 * Defining a fixed export workflow in a base class
-* Implementing format-specific rendering in subclasses
-* Exporting data to CSV, JSON, and XML
-* Using hook methods for optional behavior
-* Adding generation metadata to the XML output
+* Exporting users to CSV, JSON, and XML
+* Adding format-specific behavior through subclasses
+* Reading exported files with separate iterators
+* Parsing each format into `UserData` objects
+* Iterating through users with `for...of`
 
 ## Run
 
+Generate export files:
+
 ```bash
 npx ts-node src/main.ts
+```
+
+Read exported files through iterators:
+
+```bash
+npx ts-node src/main-iterate.ts
 ```
